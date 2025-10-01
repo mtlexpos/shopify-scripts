@@ -1,0 +1,77 @@
+:root {
+  --bg: #87ceeb;
+  --fg: #0b2239;
+  --pipe: #4ec04e;
+  --pipe-dark: #2f8a2f;
+  --overlay: rgba(0,0,0,0.5);
+  --white: #fff;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Comic Neue", sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+#game-root {
+  position: relative;
+  width: 480px;
+  height: 720px;
+}
+
+#game-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#87ceeb, #b0e0e6);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  border-radius: 8px;
+}
+
+#hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+#score {
+  font: 700 28px "Comic Neue", cursive;
+  color: var(--white);
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.25);
+}
+
+#instructions {
+  font: 700 14px "Comic Neue", cursive;
+  color: var(--white);
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.25);
+}
+
+#overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  color: var(--white);
+  pointer-events: none;
+}
+
+#overlay .message {
+  font: 700 56px "Comic Neue", cursive;
+  text-align: center;
+  text-shadow: 4px 4px 0 rgba(0,0,0,0.35);
+}
+
